@@ -1,5 +1,27 @@
-<div class="jumbotron">
-  <h1 class="display-4">{{ stock.companyName }} ({{ stock.symbol }})</h1>
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container">
+      <a href="index.html" class="navbar-brand mr-auto" id="logo"><img src="img/Logo.svg" class="img-fluid" width="150px"></a>
+      <!-- For mobile hamburger menu -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar8">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar8">
+        <ul class="navigation navbar-nav text-center ml-auto">
+          <li><a href="#" class="nav-link mr-3">About</a></li>
+          <li><a href="#" class="nav-link mr-3">Courses</a></li>
+          <li><a href="#" class="nav-link mr-3">Free Resources</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+        <ul class="navigation navbar-nav text-center ml-auto">
+          <li><a href="#" class="nav-link nav-button b-secondary">Log In</a></li>
+          <li><a href="#" class="nav-link nav-button b-primary ml-2">Get Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron">
+    <h1 class="display-4">{{ stock.companyName }} ({{ stock.symbol }})</h1>
     <strong>Latest Price: </strong>${{ stock.latestPrice }}<br/>
     <strong>Previous Close: </strong>${{ stock.previousClose }}<br/>
     <strong>Change Percent: </strong>{{ stock.changePercent }}%<br/>
@@ -7,10 +29,10 @@
     <strong>YTD Change: </strong>{{ stock.ytdChange }}%<br/>
     <strong>52wk High: </strong>{{ stock.week52High }}<br/>
     <strong>52wk Low: </strong>{{ stock.week52Low }}<br/>
-</div>
-<p><i>Disclaimer: You will need the stock ticker code (company abbreviation) to use the tool.</i></p>
-
+  </div>
+  <p><i>Disclaimer: You will need the stock ticker code (company abbreviation) to use the tool.</i></p>
+</body>
 {{!-- <br/><br/>
 {{#each stock}}
-    {{@key}} | {{this}}<br/>
+{{@key}} | {{this}}<br/>
 {{/each}} --}}

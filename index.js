@@ -7,12 +7,12 @@ const path = require('path');
 const request = require('request');
 const bodyParser = require('body-parser');
 
-const PORT = process.env.PORT || 5000; 
+const PORT = process.env.PORT || 5000;
 
 // use body parser middleware
 app.use(bodyParser.urlencoded({extended: false}));
 
-// API Key pk_c2f55eb338924babb306954aadcfd397 
+// API Key pk_c2f55eb338924babb306954aadcfd397
 // create call_api function
 function call_api(finishedAPI, ticker) {
 request('https://cloud.iexapis.com/stable/stock/' + ticker + '/quote?token=pk_c2f55eb338924babb306954aadcfd397', { json: true },  (err, res, body)=> {
@@ -31,27 +31,47 @@ app.set('view engine', 'handlebars');
 const otherstuff = "hello there, this is otherstuff!";
 
 //Set handlebar index GET route
-app.get('/', function (req, res) {
+app.get('/stock.html', function (req, res) {
     call_api(function(doneAPI){
-            res.render('home', {
+            res.render('stock', {
             stock: doneAPI
         });
     }, "fb");
 });
 
 //Set handlebar index POST route
-app.post('/', function (req, res) {
+app.post('/stock.html', function (req, res) {
     call_api(function(doneAPI){
             // posted_stuff = req.body.stock_ticker;
-            res.render('home', {
+            res.render('stock', {
             stock: doneAPI,
         });
     }, req.body.stock_ticker);
 });
 
-// Create about page route
-app.get('/about.html', function (req, res) {
-    res.render('about');
+// Create login page route
+app.get('/login.html', function (req, res) {
+    res.render('login');
+});
+
+// Create mission page route
+app.get('/mission.html', function (req, res) {
+    res.render('mission');
+});
+
+// Create coursedetail page route
+app.get('/coursedetail.html', function (req, res) {
+    res.render('coursedetail');
+});
+
+// Create dashboard page route
+app.get('/dashboard.html', function (req, res) {
+    res.render('dashboard');
+});
+
+// Create index page route
+app.get('/index.html', function (req, res) {
+    res.render('index');
 });
 
 // Set static folder

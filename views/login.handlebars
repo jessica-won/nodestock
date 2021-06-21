@@ -1,0 +1,64 @@
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container">
+      <a href="index.html" class="navbar-brand mr-auto" id="logo"><img src="img/Logo.svg" class="img-fluid" width="150px"></a>
+      <!-- For mobile hamburger menu -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar8">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar8">
+        <ul class="navigation navbar-nav text-center ml-auto">
+          <li><a href="#" class="nav-link mr-3">About</a></li>
+          <li><a href="#" class="nav-link mr-3">Courses</a></li>
+          <li><a href="#" class="nav-link mr-3">Free Resources</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+        <ul class="navigation navbar-nav text-center ml-auto">
+          <li><a href="#" class="nav-link nav-button b-secondary">Log In</a></li>
+          <li><a href="#" class="nav-link nav-button b-primary ml-2">Get Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--main login page-->
+  <div class="jumbotron jumbotron-fluid mb-0 bg-lilac" id="login">
+    <div class="container">
+      <div class="row h-100">
+        <div class="col-lg-3"></div>
+        <!--Form for login, this whole box shakes if incorrect email added-->
+        <div class="col-lg-6 my-auto bg-offwhite loginbox py-5" id="formbox">
+          <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 text-center">
+              <h2 class="mb-3">Welcome back!</h2>
+              <p class="mb-4">Sign in to your FairShare account.</p>
+              <form class="text-left" id="form_id">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="forminput">
+                <label for="email">Password</label>
+                <input type="password" name="password" id="password" class="forminput">
+                <div class="row">
+                  <div class="col">
+                    <input type="checkbox" id="remembercheck" name="remembercheck" value="rememberme">
+                    <label for="remembercheck" class="small"> Remember Me</label>
+                  </div>
+                  <div class="col text-right">
+                    <a href="#" class="small"><b>Forgot Password?</b></a>
+                  </div>
+                </div>
+                <p class="small invis" id="incorrect">Incorrect email or password</p>
+                <div class="row d-flex justify-content-center">
+                  <!--This button runs the validate function in login.js-->
+                  <div class="button b-primary mb-3 mt-3" value="Login" id="submit" onclick="validate()">Log In</div>
+                </div>
+              </form>
+              <p class="small">Don't have an account? <a href="#"><b>Sign up</b></p>
+              </div>
+              <div class="col-lg-2"></div>
+            </div>
+          </div>
+          <div class="col-lg-3"></div>
+        </div>
+      </div>
+    </div>
+  </body>
