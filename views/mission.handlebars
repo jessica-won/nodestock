@@ -32,28 +32,30 @@
       </div>
     </div>
   </nav>
-  <div class="spacer5"></div>
-  <div class="jumbotron bg-offwhite">
+  <!--main page starts-->
+  <!--Hero image area-->
+  <div class="jumbotron jumbotron-fluid mb-0" id="mission">
     <div class="container">
-      <h1 class="mb-5">Stock Market Tool</h1>
-    <h3 class="display-4">{{ stock.companyName }} ({{ stock.symbol }})</h3>
-    <strong>Latest Price: </strong>${{ stock.latestPrice }}<br/>
-    <strong>Previous Close: </strong>${{ stock.previousClose }}<br/>
-    <strong>Change Percent: </strong>{{ stock.changePercent }}%<br/>
-    <strong>Market Cap: </strong>${{ stock.marketCap }}<br/>
-    <strong>YTD Change: </strong>{{ stock.ytdChange }}%<br/>
-    <strong>52wk High: </strong>{{ stock.week52High }}<br/>
-    <strong>52wk Low: </strong>{{ stock.week52Low }}<br/>
-    <hr>
-  <p><i>Disclaimer: You will need the stock ticker code (company abbreviation) to use the tool.</i></p>
-      <form class="form-inline my-2 my-lg-0 ml-auto" action="/stock.html" method="POST">
-      <input class="form-control mr-sm-2" type="search" placeholder="Lookup Stock Quote" aria-label="Search" name="stock_ticker">
-      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Lookup</button>
-    </form>
+      <div class="row h-100">
+        <div class="col-lg-6  my-auto">
+          <h1>“Empowering headline or some kind of inspirational quote”</h1>
+        </div>
+      </div>
     </div>
+  </div>
+  <!--Section about learning comfortably-->
+  <div class="jumbotron jumbotron-fluid bg-offwhite mb-0" id="learncomfortably">
+    <div class="container bg-offwhite" id="learncomfortably">
+      <div class="row">
+        <div class="col-lg-6 my-auto">
+          <img src="img/placeholder2.png" class="img-fluid">
+        </div>
+        <div class="col-lg-6 my-auto">
+          <h3 class="mb-3">Mission & Values</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hendrerit et sagittis, tincidunt sit volutpat sodales morbi fames tortor. Sem libero quis cras libero arcu, cras. Placerat blandit senectus penatibus sodales nunc, pellentesque leo sapien. Laoreet viverra dignissim quis risus ante arcu sit commodo. Aliquam varius quis turpis cras quam amet. Mauris vitae ut eget ac consequat blandit ultrices. Rhoncus, morbi quis ut nunc eu lorem netus. Ac adipiscing odio id a massa tellus id orci interdum. Sagittis, eu, aenean elementum netus aliquet.</p>
+        </div>
+      </div>
     </div>
+  </div>
+
 </body>
-{{!-- <br/><br/>
-{{#each stock}}
-{{@key}} | {{this}}<br/>
-{{/each}} --}}
