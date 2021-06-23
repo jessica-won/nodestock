@@ -27,7 +27,7 @@
         </ul>
         <ul class="navigation navbar-nav text-center ml-auto">
           <li><a href="login.html" class="nav-link nav-button b-secondary">Log In</a></li>
-          <li><a href="#" class="nav-link nav-button b-primary">Get Started</a></li>
+          <li><a href="signup.html" class="nav-link nav-button b-primary">Get Started</a></li>
         </ul>
       </div>
     </div>
@@ -36,24 +36,84 @@
   <div class="jumbotron bg-offwhite">
     <div class="container">
       <h1 class="mb-5">Stock Market Tool</h1>
-    <h3 class="display-4">{{ stock.companyName }} ({{ stock.symbol }})</h3>
-    <strong>Latest Price: </strong>${{ stock.latestPrice }}<br/>
-    <strong>Previous Close: </strong>${{ stock.previousClose }}<br/>
-    <strong>Change Percent: </strong>{{ stock.changePercent }}%<br/>
-    <strong>Market Cap: </strong>${{ stock.marketCap }}<br/>
-    <strong>YTD Change: </strong>{{ stock.ytdChange }}%<br/>
-    <strong>52wk High: </strong>{{ stock.week52High }}<br/>
-    <strong>52wk Low: </strong>{{ stock.week52Low }}<br/>
-    <hr>
-  <p><i>Disclaimer: You will need the stock ticker code (company abbreviation) to use the tool.</i></p>
+      <h3 class="display-4">{{ stock.companyName }} ({{ stock.symbol }})</h3>
+      <div class="row">
+        <div class="col-lg-3">
+          <strong data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover"
+            data-content="Up to date price of the stock">Latest Price: </strong>
+        </div>
+        <div class="col-lg-3">
+          ${{ stock.latestPrice }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <strong data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover"
+            data-content="Price of the stock at market closing on the previous day">Previous Close: </strong>
+        </div>
+        <div class="col-lg-3">
+          ${{ stock.previousClose }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <strong data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover"
+            data-content="Change between the latest price and the price at market closing on the previous day">Change
+            Percent: </strong>
+        </div>
+        <div class="col-lg-3">
+          {{ stock.changePercent }}%
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <strong data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover"
+            data-content="Total value of a publically traded company">Market Cap: </strong>
+        </div>
+        <div class="col-lg-3">
+          ${{ stock.marketCap }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <strong data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover"
+            data-content="Price change since the beginning of the year">YTD Change: </strong>
+        </div>
+        <div class="col-lg-3">
+          {{ stock.ytdChange }}%
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <strong data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover"
+            data-content="Highest price in the past year">52wk High: </strong>
+        </div>
+        <div class="col-lg-3">
+          {{ stock.week52High }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <strong data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover"
+            data-content="Lowest price in the past year">52wk Low: </strong>
+        </div>
+        <div class="col-lg-3">
+          {{ stock.week52Low }}
+        </div>
+      </div>
+      <hr>
+      <p><i>Disclaimer: You will need the stock ticker code (company abbreviation) to use the tool.</i></p>
       <form class="form-inline my-2 my-lg-0 ml-auto" action="/stock.html" method="POST">
-      <input class="form-control mr-sm-2" type="search" placeholder="Lookup Stock Quote" aria-label="Search" name="stock_ticker">
-      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Lookup</button>
-    </form>
+        <input class="form-control mr-sm-2" type="search" placeholder="Lookup Stock Quote" aria-label="Search"
+          name="stock_ticker">
+        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Lookup</button>
+      </form>
     </div>
-    </div>
+  </div>
 </body>
-{{!-- <br/><br/>
+<!--Footer area-->
+<footer class="bg-darkblue">
+{{!-- <br /><br />
 {{#each stock}}
-{{@key}} | {{this}}<br/>
+{{@key}} | {{this}}<br />
 {{/each}} --}}

@@ -1,0 +1,63 @@
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container">
+      <a href="index.html" class="navbar-brand mr-auto" id="logo"><img src="img/Logo.svg" class="img-fluid" width="150px"></a>
+      <!-- For mobile hamburger menu -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar8">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar8">
+        <ul class="navigation navbar-nav text-center ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Our Company</a></li>
+              <li><a class="dropdown-item" href="mission.html">Mission and Values</a></li>
+              <li><a class="dropdown-item" href="#">Contact</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Courses</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Courses by Subject</a></li>
+              <li><a class="dropdown-item" href="#">Packages</a></li>
+            </ul>
+          </li>
+          <li><a href="stock.html" class="nav-link mr-3">Stock Market Tool</a></li>
+        </ul>
+        <ul class="navigation navbar-nav text-center ml-auto">
+          <li><a href="login.html" class="nav-link nav-button b-secondary">Log In</a></li>
+          <li><a href="#" class="nav-link nav-button b-primary">Get Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="spacer5"></div>
+  <div class="jumbotron bg-offwhite">
+    <div class="container">
+      <h1 class="mb-5">Stock Market Tool</h1>
+    <h3 class="display-4">{{ stock.companyName }} ({{ stock.symbol }})</h3>
+    <strong>Latest Price: </strong>${{ stock.open }}<br/>
+    <strong>Previous Close: </strong>${{ stock.previousClose }}<br/>
+    <strong>Change Percent: </strong>{{ stock.changePercent }}%<br/>
+    <strong>Market Cap: </strong>${{ stock.marketCap }}<br/>
+    <strong>YTD Change: </strong>{{ stock.ytdChange }}%<br/>
+    <strong>52wk High: </strong>{{ stock.week52High }}<br/>
+    <strong>52wk Low: </strong>{{ stock.week52Low }}<br/>
+    <hr>
+  <p><i>Disclaimer: You will need the stock ticker code (company abbreviation) to use the tool.</i></p>
+      <form class="form-inline my-2 my-lg-0 ml-auto" action="/stock.html" method="POST">
+      <input class="form-control mr-sm-2" type="search" placeholder="Lookup Stock Quote" aria-label="Search" name="stock_ticker">
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Lookup</button>
+    </form>
+    </div>
+    </div>
+    <br/><br/>
+{{#each stock}}
+{{@key}} | {{this}}<br/>
+{{/each}} 
+</body>
+{{!-- <br/><br/>
+{{#each stock}}
+{{@key}} | {{this}}<br/>
+{{/each}} --}}
