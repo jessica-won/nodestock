@@ -7,15 +7,15 @@ html {
 body{
   font-family: 'Montserrat', serif;
   font-size: 18px;
-  color: #212348;
+  color: #18191A;
 }
 
 a{
-  color: #212348;
+  color: #18191A;
 }
 
 a:hover{
-  color: #212348;
+  color: #18191A;
   text-decoration: underline;
 }
 
@@ -50,11 +50,10 @@ h4{
 
 .bigfont{
   font-size: 130;
-    transform: translateY(-90%);
 }
 
 .darkfont{
-  color: #212348 !important;
+  color: #18191A !important;
 }
 
 /*Italics for header*/
@@ -69,6 +68,13 @@ h4{
   font-family:'Playfair Display';
   font-weight: 500;
   font-size: 36px;
+  font-style:italic;
+}
+
+.emphasis3{
+  font-family:'Playfair Display';
+  font-weight: 500;
+  font-size: 18px;
   font-style:italic;
 }
 
@@ -155,9 +161,9 @@ h4{
   border-color: #2F4F4F;
 }
 .btn-g-secondary:hover, .btn-g-secondary:focus {
-  background-color: white;
-  border-color: #658B87 !important;
-  color: #658B87 !important;
+  background-color: #E3EDE6;
+  border-color: #2F4F4F !important;
+  color: #2F4F4F !important;
   border-radius: 42px;
 }
 /*Primary button colours*/
@@ -244,7 +250,7 @@ h4{
 }
 
 .bg-darkblue{
-  background-color: #212348;
+  background-color: #18191A;
 }
 
 .bg-black{
@@ -259,8 +265,9 @@ h4{
 #home-g{
   background-position: right;
   background-size: cover;
-  height: 100vh;
   background-color: white;
+  padding-top: 10vh;
+  padding-bottom:10vh;
 }
 
 #home-l{
@@ -272,7 +279,8 @@ h4{
 }
 
 #homequote{
-  height: 50vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #takecontrol{
@@ -294,6 +302,11 @@ h4{
 }
 
 #takecontrol2{
+  padding-top:100px;
+  padding-bottom: 100px;
+}
+
+#testimonial{
   padding-top:100px;
   padding-bottom: 100px;
 }
@@ -327,16 +340,10 @@ h4{
 
 /*Mission page section*/
 #mission{
-  background-image: url("../img/placeholder3.png");
-  background-size: cover;
   height: 70vh;
-  background-color: white;
 }
 
-#dashboard2{
-  border-radius: 20px;
-  padding:50px;
-}
+
 
 /*Generic spacing for padding*/
 .spacer25{
@@ -382,7 +389,7 @@ h4{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #212348;
+  color: #18191A;
 }
 
 .featurelearncard{
@@ -396,7 +403,7 @@ h4{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #212348;
+  color: #18191A;
 }
 
 /*Amateur, Beginner, Pro Cards*/
@@ -407,6 +414,7 @@ h4{
   display: flex;
   align-items: center;
   width: 95%;
+  margin-bottom:20px;
 }
 
 .plancard-g:hover{
@@ -431,6 +439,46 @@ h4{
   padding-right: 10px;
   color: #2FAB73;
 }
+
+.planimage{
+  position:absolute;
+  bottom: 10%;
+  left:70%;
+}
+
+.planimage2{
+  position:absolute;
+  bottom: 5%;
+  left:75%;
+}
+
+.planimage3{
+  position:absolute;
+  bottom: 5%;
+  left:65%;
+}
+
+.promote{
+    transform: scale(1.1);
+}
+
+.testimonialcard{
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 95%;
+}
+.testimonialcard:hover{
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)!important;
+}
+
+.roundborder{
+  height: 25%;
+  width: 25%;
+
+}
+
 
 .bordertop{
   border-top-style: solid;
@@ -471,7 +519,7 @@ h4{
   border: none;
   border-radius: 10px;
   width: 100%;
-  color: #212348 !important;
+  color: #18191A !important;
 }
 
 .cardhover:hover, .cardhover:focus{
@@ -522,6 +570,31 @@ h4{
   }
 }
 
+/*Makes rates disappear when carousels shrink*/
+@media (max-width: 992px) {
+  .herodisappear {
+    display:none;
+  }
+}
+
+.heroappear{
+  display:none;
+}
+
+@media (max-width: 992px) {
+  .heroappear {
+    display:block;
+  }
+}
+
+.svg-container {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+}
 /*Progress bar for courses page*/
 .progressbar-g{
   height: 10px;
@@ -586,6 +659,13 @@ h4{
   margin-bottom: 10px;
 }
 
+.u-lightgrey{
+  height: 10px;
+  width: 100%;
+  background-color: #F2F0EF;
+    margin-bottom: 10px;
+}
+
 /*Back button on course details*/
 .backbutton{
     transform: translateX(-50%);
@@ -642,7 +722,7 @@ h4{
   margin-right:15px;
   height: 75%;
   width: 2px;
-  background-color: #212348;
+  background-color: #18191A;
   float:left;
   margin-top: 0.5rem;
 }
@@ -823,4 +903,9 @@ transform-box:fill-box;
   to{
     transform:rotateY(-20deg);
   }
+}
+
+.modal-backdrop {
+   background-color: 000000;
+   opacity: 0.8 !important;
 }
