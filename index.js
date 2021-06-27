@@ -154,9 +154,9 @@ app.get('/signup.html', function (req, res) {
 });
 
 // Create index page route
-app.get('/styleguide.html', function (req, res) {
-    res.render('styleguide');
-});
+//app.get('/styleguide.html', function (req, res) {
+//    res.render('styleguide');
+//});
 
 
 // Set static folder
