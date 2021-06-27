@@ -144,7 +144,7 @@ app.get('/dashboard.html', function (req, res) {
 });
 
 // Create index page route
-app.get('/index.html', function (req, res) {
+app.get('/', function (req, res) {
     res.render('index');
 });
 
@@ -153,35 +153,11 @@ app.get('/signup.html', function (req, res) {
     res.render('signup');
 });
 
-// Create login page route
-app.get('/login2.html', function (req, res) {
-    res.render('login2');
-});
-
-// Create mission page route
-app.get('/mission2.html', function (req, res) {
-    res.render('mission2');
-});
-
-// Create coursedetail page route
-app.get('/coursedetail2.html', function (req, res) {
-    res.render('coursedetail2');
-});
-
-// Create dashboard page route
-app.get('/dashboard2.html', function (req, res) {
-    res.render('dashboard2');
-});
-
 // Create index page route
-app.get('/index2.html', function (req, res) {
-    res.render('index2');
+app.get('/styleguide.html', function (req, res) {
+    res.render('styleguide');
 });
 
-// Create index page route
-app.get('/signup2.html', function (req, res) {
-    res.render('signup2');
-});
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
