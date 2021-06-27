@@ -149,6 +149,11 @@ app.get('/', function (req, res) {
 });
 
 // Create index page route
+app.get('/index.html', function (req, res) {
+    res.render('index');
+});
+
+// Create index page route
 app.get('/signup.html', function (req, res) {
     res.render('signup');
 });
