@@ -720,7 +720,7 @@ h4{
 /*Vertical ruler between images in the course box*/
 .vertrule{
   margin-right:15px;
-  height: 75%;
+  height: 2.5rem;
   width: 2px;
   background-color: #18191A;
   float:left;
